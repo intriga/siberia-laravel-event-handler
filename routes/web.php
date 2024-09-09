@@ -6,9 +6,15 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\UserController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+use App\Http\Controllers\Frontend\FrontendController;
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// frontend
+Route::get('/', [FrontendController::class, 'index']);
 
 Auth::routes();
 

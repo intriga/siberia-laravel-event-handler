@@ -31,3 +31,8 @@ Route::delete('/category/{id}/delete', [CategoryController::class, 'destroy']);
 // module users
 Route::get('/users', [UserController::class,'index']);
 Route::post('/user', [UserController::class,'store']);
+
+
+// frontend
+Route::get('/', [PostController::class,'index']);
+Route::get('/category', [CategoryController::class,'index']);
